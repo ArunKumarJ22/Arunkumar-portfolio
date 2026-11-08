@@ -534,3 +534,212 @@ h1 {
     transform: none;
   }
 }
+
+/* =====================================
+   EXPERIENCE & EDUCATION
+===================================== */
+
+.journey-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* TIMELINE */
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 38px;
+}
+
+.timeline::before {
+  content: '';
+
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 15px;
+
+  width: 1px;
+  background: #dedede;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 45px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+/* MARKERS */
+
+.timeline-marker {
+  position: absolute;
+  left: -38px;
+  top: 5px;
+
+  width: 17px;
+  height: 17px;
+
+  border: 1px solid #111;
+  border-radius: 50%;
+
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    width: 5px;
+    height: 5px;
+    background: #111;
+    border-radius: 50%;
+  }
+}
+
+/* TIMELINE CARD */
+
+.timeline-card {
+  padding: 30px;
+
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    border-color: #999;
+    transform: translateX(5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.035);
+  }
+}
+
+/* HEADER */
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.timeline-type {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #999;
+}
+
+.timeline-header h3 {
+  font-size: 25px;
+  letter-spacing: -1px;
+  margin: 12px 0 7px;
+}
+
+.timeline-header h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+}
+
+.timeline-date {
+  white-space: nowrap;
+
+  font-size: 11px;
+  color: #777;
+
+  padding: 8px 12px;
+
+  background: #f5f5f5;
+  border-radius: 3px;
+}
+
+/* DESCRIPTION */
+
+.timeline-description {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.9;
+  margin-top: 22px;
+}
+
+.responsibility-list {
+  margin-top: 18px;
+  padding-left: 18px;
+
+  li {
+    font-size: 12px;
+    color: #666;
+    line-height: 2;
+    padding-left: 5px;
+  }
+
+  li::marker {
+    color: #999;
+  }
+}
+
+/* EDUCATION */
+
+.education-card {
+  background: #fafafa;
+}
+
+.education-location {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+
+  .journey-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .timeline {
+    padding-left: 28px;
+  }
+
+  .timeline-marker {
+    left: -28px;
+  }
+
+  .timeline-card {
+    padding: 21px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .timeline-header h3 {
+    font-size: 21px;
+  }
+
+  .timeline-date {
+    white-space: normal;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-card {
+    transition: none;
+  }
+
+  .timeline-card:hover {
+    transform: none;
+  }
+}

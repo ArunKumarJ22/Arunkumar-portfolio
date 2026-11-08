@@ -6,6 +6,8 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -289,6 +291,117 @@
           }
 
           <span class="project-arrow">↗</span>
+
+        </div>
+
+      </article>
+
+    }
+
+  </div>
+
+</section>
+
+<!-- EXPERIENCE SECTION -->
+
+<section id="experience" class="section container journey-section reveal">
+
+  <div class="section-heading">
+    <p class="eyebrow">04 / EXPERIENCE</p>
+    <h2>Where I've worked.</h2>
+    <p class="section-description">
+      My professional journey, practical experience and continuous growth.
+    </p>
+  </div>
+
+  <div class="timeline">
+
+    @for (item of experiences; track item.company) {
+
+      <article class="timeline-item">
+
+        <div class="timeline-marker">
+          <span></span>
+        </div>
+
+        <div class="timeline-card">
+
+          <div class="timeline-header">
+
+            <div>
+              <span class="timeline-type">{{ item.type }}</span>
+              <h3>{{ item.company }}</h3>
+              <h4>{{ item.role }}</h4>
+            </div>
+
+            <span class="timeline-date">{{ item.period }}</span>
+
+          </div>
+
+          <p class="timeline-description">
+            {{ item.description }}
+          </p>
+
+          <ul class="responsibility-list">
+            @for (task of item.responsibilities; track task) {
+              <li>{{ task }}</li>
+            }
+          </ul>
+
+        </div>
+
+      </article>
+
+    }
+
+  </div>
+
+</section>
+
+
+<!-- EDUCATION SECTION -->
+
+<section id="education" class="section container journey-section reveal">
+
+  <div class="section-heading">
+    <p class="eyebrow">05 / EDUCATION</p>
+    <h2>Where I learned.</h2>
+    <p class="section-description">
+      My academic background and educational journey.
+    </p>
+  </div>
+
+  <div class="timeline">
+
+    @for (item of education; track item.institution) {
+
+      <article class="timeline-item">
+
+        <div class="timeline-marker">
+          <span></span>
+        </div>
+
+        <div class="timeline-card education-card">
+
+          <div class="timeline-header">
+
+            <div>
+              <span class="timeline-type">EDUCATION</span>
+              <h3>{{ item.institution }}</h3>
+              <h4>{{ item.degree }}</h4>
+            </div>
+
+            <span class="timeline-date">{{ item.period }}</span>
+
+          </div>
+
+          <p class="education-location">
+            <span>⌖</span> {{ item.location }}
+          </p>
+
+          <p class="timeline-description">
+            {{ item.description }}
+          </p>
 
         </div>
 

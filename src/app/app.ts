@@ -19,6 +19,22 @@ interface Project {
   githubUrl: string;
   featured: boolean;
 }
+interface Experience {
+  company: string;
+  role: string;
+  period: string;
+  type: string;
+  description: string;
+  responsibilities: string[];
+}
+
+interface Education {
+  institution: string;
+  degree: string;
+  period: string;
+  location: string;
+  description: string;
+}
 
 @Component({
   selector: 'app-root',
@@ -96,6 +112,57 @@ export class App implements AfterViewInit, OnDestroy {
       featured: false
     }
   ];
+  experiences: Experience[] = [
+  {
+    company: 'Roadmap IT Solutions',
+    role: 'Add your actual job title',
+    period: 'Add employment dates',
+    type: 'Professional Experience',
+    description:
+      'Add a short description of your actual role and work.',
+    responsibilities: [
+      'Describe your actual technical responsibilities.',
+      'Mention the technologies you used.',
+      'Highlight a genuine contribution or achievement.'
+    ]
+  },
+  {
+    company: 'Verzeo',
+    role: 'Add your actual internship title',
+    period: 'Add internship dates',
+    type: 'Internship',
+    description:
+      'Describe your internship and the work you performed.',
+    responsibilities: [
+      'Describe the projects or tasks you completed.',
+      'Mention your technical contributions.',
+      'Highlight the skills you developed.'
+    ]
+  },
+  {
+    company: 'Freelance',
+    role: 'Freelance Web Developer',
+    period: '2022 – Present',
+    type: 'Freelance',
+    description:
+      'Developing web solutions and working on independent software projects.',
+    responsibilities: [
+      'Develop websites and web applications.',
+      'Work with frontend and backend technologies.',
+      'Manage development tasks and project delivery.'
+    ]
+  }
+];
+education: Education[] = [
+  {
+    institution: 'EPITA',
+    degree: 'Master’s in Software Engineering',
+    period: 'Add your actual study dates',
+    location: 'Paris, France',
+    description:
+      'Advanced studies in software engineering, application development and modern computing technologies.'
+  }
+];
 
   ngAfterViewInit(): void {
 
