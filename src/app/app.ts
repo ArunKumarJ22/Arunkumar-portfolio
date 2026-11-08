@@ -49,15 +49,12 @@ export class App implements AfterViewInit, OnDestroy {
 
   private observer?: IntersectionObserver;
 
-  // Mobile navigation state
+  
   menuOpen = false;
 
-  // Toggle mobile menu
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
   }
-
-   // Close menu when a navigation link is selected
   closeMenu(): void {
     this.menuOpen = false;
   }
@@ -163,6 +160,22 @@ education: Education[] = [
     location: 'Paris, France',
     description:
       'Advanced studies in software engineering, application development and modern computing technologies.'
+  },
+   {
+    institution: 'Sri Aravindar Arts and Science College',
+    degree: 'Master of Science in Computer Science',
+    period: '2020- 2022',
+    location: 'Puducherry, India',
+    description:
+      'Master’s degree program focused on computer science, programming, and software development.'
+  },
+   {
+    institution: 'Sri Aravindar Arts and Science College',
+    degree: 'Bachelor of Science in Computer Science',
+    period: '2016 - 2019',
+    location: 'Puducherry, India',
+    description:
+      'Bachelor’s degree program providing foundational knowledge in computer science, programming, and software development.'
   }
 ];
 
