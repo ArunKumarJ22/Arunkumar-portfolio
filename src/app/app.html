@@ -1,0 +1,311 @@
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="#home" class="logo">AK.</a>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero container" id="home">
+    <p class="eyebrow">HELLO, I'M ARUN KUMAR</p>
+
+    <h1>
+      I build software<br />
+      that makes a <span>difference.</span>
+    </h1>
+
+    <p class="description">
+      Full Stack Developer & AI Engineer based in Paris, France.
+      Building intelligent applications and scalable digital experiences.
+    </p>
+
+    <div class="actions">
+      <a href="#projects" class="primary-btn">Explore my work ↗</a>
+      <a href="https://github.com/ArunKumarJ22"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="secondary-btn">
+        GitHub ↗
+      </a>
+    </div>
+  </section>
+
+  <!--ABOUT SECTION -->
+
+<section id="about" class="section container reveal">
+
+  <div class="section-heading">
+    <p class="eyebrow">01 / ABOUT ME</p>
+    <h2>A little about me.</h2>
+  </div>
+
+  <div class="about-grid">
+
+    <div class="about-main">
+      <h3>
+        I enjoy building technology
+        that solves real-world problems.
+      </h3>
+
+      <p>
+        I'm Arun Kumar, a Master's student in Software Engineering
+        at EPITA Paris, France.
+      </p>
+
+      <p>
+        My interests span full-stack development, backend engineering,
+        artificial intelligence and cloud technologies.
+        I enjoy taking ideas from concept to working applications.
+      </p>
+
+      <p>
+        Through projects like MeetMind and CommitCompass,
+        I'm continuously improving my ability to design,
+        develop and deploy software solutions.
+      </p>
+    </div>
+
+    <div class="about-details">
+
+      <div class="detail-item">
+        <span>EDUCATION</span>
+        <strong>M.Sc. Software Engineering</strong>
+        <small>EPITA Paris, France</small>
+      </div>
+
+      <div class="detail-item">
+        <span>FOCUS</span>
+        <strong>Full Stack + AI Engineering</strong>
+        <small>Backend, frontend and AI systems</small>
+      </div>
+
+      <div class="detail-item">
+        <span>LOCATION</span>
+        <strong>Paris, France</strong>
+        <small>Open to opportunities in France</small>
+      </div>
+
+      <div class="detail-item">
+        <span>INTERESTS</span>
+        <strong>Software Architecture</strong>
+        <small>Cloud, AI and scalable applications</small>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TECHNICAL SKILLS SECTION -->
+<section id="skills" class="section container reveal">
+
+  <div class="section-heading">
+    <p class="eyebrow">02 / TECHNICAL SKILLS</p>
+    <h2>Tools I work with.</h2>
+    <p class="section-description">
+      Technologies and tools I use to build, develop and deploy applications.
+    </p>
+  </div>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <span class="skill-number">01</span>
+      <h3>Programming Languages</h3>
+      <div class="skill-tags">
+        <span>Java</span>
+        <span>Python</span>
+        <span>TypeScript</span>
+        <span>JavaScript</span>
+        <span>SQL</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-number">02</span>
+      <h3>Frontend Development</h3>
+      <div class="skill-tags">
+        <span>Angular</span>
+        <span>React</span>
+        <span>Next.js</span>
+        <span>HTML5</span>
+        <span>SCSS</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-number">03</span>
+      <h3>Backend Development</h3>
+      <div class="skill-tags">
+        <span>Spring Boot</span>
+        <span>FastAPI</span>
+        <span>Node.js</span>
+        <span>REST APIs</span>
+        <span>JPA / Hibernate</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-number">04</span>
+      <h3>AI & Machine Learning</h3>
+      <div class="skill-tags">
+        <span>OpenAI API</span>
+        <span>Whisper</span>
+        <span>RAG</span>
+        <span>LLMs</span>
+        <span>Pinecone</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-number">05</span>
+      <h3>Databases</h3>
+      <div class="skill-tags">
+        <span>PostgreSQL</span>
+        <span>MySQL</span>
+        <span>Redis</span>
+        <span>Supabase</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <span class="skill-number">06</span>
+      <h3>Cloud & DevOps</h3>
+      <div class="skill-tags">
+        <span>Docker</span>
+        <span>Azure</span>
+        <span>GitHub Actions</span>
+        <span>Linux</span>
+        <span>Prometheus</span>
+        <span>Grafana</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+  
+<section id="projects" class="section projects-section container">
+
+  <!-- SECTION HEADER -->
+  <div class="section-heading reveal">
+
+    <p class="eyebrow">03 / SELECTED WORK</p>
+
+    <h2>Things I've built.</h2>
+
+    <p class="section-description">
+      A collection of projects where I explore software engineering,
+      artificial intelligence and cloud technologies.
+    </p>
+
+  </div>
+
+
+  <!-- PROJECT CARDS -->
+  <div class="projects-grid">
+
+    @for (project of projects; track project.number) {
+
+      <article class="project-card reveal">
+
+        <!-- PROJECT HEADER -->
+        <div class="project-top">
+
+          <span class="project-number">
+            {{ project.number }} /
+          </span>
+
+          <span class="project-category">
+            {{ project.category }}
+          </span>
+
+          @if (project.featured) {
+            <span class="featured-label">
+              FEATURED
+            </span>
+          }
+
+        </div>
+
+
+        <!-- PROJECT CONTENT -->
+        <div class="project-content">
+
+          <h3>{{ project.title }}</h3>
+
+          <p class="project-description">
+            {{ project.description }}
+          </p>
+
+          <p class="project-details">
+            {{ project.details }}
+          </p>
+
+        </div>
+
+
+        <!-- TECHNOLOGY TAGS -->
+        <div class="project-technologies">
+
+          @for (technology of project.technologies; track technology) {
+            <span class="technology-tag">
+              {{ technology }}
+            </span>
+          }
+
+        </div>
+
+
+        <!-- PROJECT FOOTER -->
+        <div class="project-footer">
+
+          @if (project.githubUrl) {
+
+            <a
+              [href]="project.githubUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View repository <span>↗</span>
+            </a>
+
+          } @else {
+
+            <span class="project-coming-soon">
+              Repository link coming soon
+            </span>
+
+          }
+
+          <span class="project-arrow">↗</span>
+
+        </div>
+
+      </article>
+
+    }
+
+  </div>
+
+</section>
+
+
+  <section id="contact" class="section container">
+    <p class="eyebrow">03 / CONTACT</p>
+    <h2>Let's build something meaningful.</h2>
+    <a href="https://www.linkedin.com/in/arun-kumar22"
+       target="_blank"
+       rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+  </section>
+</main>

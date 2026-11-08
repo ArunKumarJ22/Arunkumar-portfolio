@@ -1,0 +1,138 @@
+
+import {
+  Component,
+  AfterViewInit,
+  OnDestroy,
+  PLATFORM_ID,
+  inject
+} from '@angular/core';
+
+import { isPlatformBrowser } from '@angular/common';
+
+interface Project {
+  number: string;
+  category: string;
+  title: string;
+  description: string;
+  details: string;
+  technologies: string[];
+  githubUrl: string;
+  featured: boolean;
+}
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [],
+  templateUrl: './app.html',
+  styleUrl: './app.scss'
+})
+export class App implements AfterViewInit, OnDestroy {
+
+  private platformId = inject(PLATFORM_ID);
+
+  private observer?: IntersectionObserver;
+
+  projects: Project[] = [
+    {
+      number: '01',
+      category: 'AI ENGINEERING',
+      title: 'MeetMind',
+      description:
+        'Transform meetings into searchable knowledge with artificial intelligence.',
+      details:
+        'An AI-powered meeting intelligence platform featuring speech transcription, meeting summaries, knowledge retrieval and interactive learning.',
+      technologies: [
+        'Python',
+        'FastAPI',
+        'React',
+        'Next.js',
+        'PostgreSQL',
+        'Whisper',
+        'OpenAI',
+        'Docker'
+      ],
+      githubUrl: 'https://github.com/ArunKumarJ22/MeetMind',
+      featured: true
+    },
+    {
+      number: '02',
+      category: 'FULL STACK DEVELOPMENT',
+      title: 'CommitCompass',
+      description:
+        'Explore and organize GitHub commit activity through a full-stack application.',
+      details:
+        'A GitHub commit intelligence project with a Spring Boot backend, GitHub API integration, React and TypeScript frontend, and PostgreSQL persistence.',
+      technologies: [
+        'Java',
+        'Spring Boot',
+        'React',
+        'TypeScript',
+        'PostgreSQL',
+        'GitHub API',
+        'Docker'
+      ],
+      githubUrl: '',
+      featured: true
+    },
+    {
+      number: '03',
+      category: 'DEVOPS & CLOUD',
+      title: 'DevOps-CICD',
+      description:
+        'Automate application delivery with containerization and cloud deployment.',
+      details:
+        'A hands-on DevOps project exploring Docker, Docker Compose, GitHub Actions, Linux and Azure VM deployment.',
+      technologies: [
+        'Python',
+        'Flask',
+        'Docker',
+        'Docker Compose',
+        'GitHub Actions',
+        'Azure',
+        'Linux'
+      ],
+      githubUrl: 'https://github.com/ArunKumarJ22/Devops-CICD',
+      featured: false
+    }
+  ];
+
+  ngAfterViewInit(): void {
+
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    const elements = document.querySelectorAll('.reveal');
+
+    if (!('IntersectionObserver' in window)) {
+      elements.forEach(element => {
+        element.classList.add('is-visible');
+      });
+      return;
+    }
+
+    this.observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      }
+    );
+
+    elements.forEach(element => {
+      this.observer?.observe(element);
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.observer?.disconnect();
+  }
+}
