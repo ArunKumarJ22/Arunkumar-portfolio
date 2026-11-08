@@ -49,6 +49,19 @@ export class App implements AfterViewInit, OnDestroy {
 
   private observer?: IntersectionObserver;
 
+  // Mobile navigation state
+  menuOpen = false;
+
+  // Toggle mobile menu
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+   // Close menu when a navigation link is selected
+  closeMenu(): void {
+    this.menuOpen = false;
+  }
+
   projects: Project[] = [
     {
       number: '01',
@@ -88,7 +101,7 @@ export class App implements AfterViewInit, OnDestroy {
         'GitHub API',
         'Docker'
       ],
-      githubUrl: '',
+      githubUrl: 'https://github.com/ArunKumarJ22/CommitCompass---Version-Control-Intelligence',
       featured: true
     },
     {
@@ -115,55 +128,45 @@ export class App implements AfterViewInit, OnDestroy {
   experiences: Experience[] = [
   {
     company: 'Roadmap IT Solutions',
-    role: 'Add your actual job title',
-    period: 'Add employment dates',
+    role: 'Software Engineer',
+    period: ' 02/2023 – 04/2024',
     type: 'Professional Experience',
     description:
-      'Add a short description of your actual role and work.',
+      'Worked on full-stack web application development, collaborating with cross-functional teams to deliver reliable solutions, improve application performance, and streamline business workflows.',
     responsibilities: [
-      'Describe your actual technical responsibilities.',
-      'Mention the technologies you used.',
-      'Highlight a genuine contribution or achievement.'
+      'Developed and enhanced web application features using Angular, TypeScript, and Spring Boot.',
+      'Streamlined an 8-step manual business process, reducing processing time by 60% through workflow improvements.',
+      'Improved client-facing website performance by 45%, delivering faster page rendering and a smoother user experience.',
+      'Collaborated with clients and development teams to understand requirements, troubleshoot issues, and deliver features within project deadlines.'
     ]
   },
   {
     company: 'Verzeo',
-    role: 'Add your actual internship title',
-    period: 'Add internship dates',
+    role: 'Full-Stack Web Developer Intern',
+    period: ' 07/2022 – 10/2022',
     type: 'Internship',
     description:
-      'Describe your internship and the work you performed.',
+      'Gained hands-on experience in full-stack web development, contributing to application improvements and learning how to identify, troubleshoot, and resolve real-world performance issues.',
     responsibilities: [
-      'Describe the projects or tasks you completed.',
-      'Mention your technical contributions.',
-      'Highlight the skills you developed.'
-    ]
+      'Worked on web application development tasks, gaining practical experience in full-stack development.',
+      'Identified and resolved application performance bottlenecks, reducing page-loading time by 40%.',
+      'Investigated UI and performance issues, implementing improvements within a single development sprint.',
+      'Strengthened problem-solving, debugging, and collaborative development skills while working in an agile environment.'
+  ]
   },
-  {
-    company: 'Freelance',
-    role: 'Freelance Web Developer',
-    period: '2022 – Present',
-    type: 'Freelance',
-    description:
-      'Developing web solutions and working on independent software projects.',
-    responsibilities: [
-      'Develop websites and web applications.',
-      'Work with frontend and backend technologies.',
-      'Manage development tasks and project delivery.'
-    ]
-  }
 ];
 education: Education[] = [
   {
     institution: 'EPITA',
     degree: 'Master’s in Software Engineering',
-    period: 'Add your actual study dates',
+    period: '2026- 2027',
     location: 'Paris, France',
     description:
       'Advanced studies in software engineering, application development and modern computing technologies.'
   }
 ];
 
+  currentYear = new Date().getFullYear();
   ngAfterViewInit(): void {
 
     if (!isPlatformBrowser(this.platformId)) {
