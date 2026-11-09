@@ -120,7 +120,26 @@ export class App implements AfterViewInit, OnDestroy {
       ],
       githubUrl: 'https://github.com/ArunKumarJ22/Devops-CICD',
       featured: false
+    },
+    {
+      number: '04',
+      category: 'My Website',
+      title: 'Personal Portfolio',
+      description:
+        'A responsive personal portfolio website showcasing projects and experience.',
+      details:
+        'A modern, responsive portfolio website built with Angular and TypeScript, featuring a clean design and smooth user experience.',
+      technologies: [
+        'Angular',
+        'TypeScript',
+        'HTML',
+        'SCSS',
+        'Responsive Design'
+      ],
+      githubUrl: 'https://github.com/ArunKumarJ22/Arunkumar-portfolio',
+      featured: false
     }
+
   ];
   experiences: Experience[] = [
   {
@@ -149,7 +168,7 @@ export class App implements AfterViewInit, OnDestroy {
       'Identified and resolved application performance bottlenecks, reducing page-loading time by 40%.',
       'Investigated UI and performance issues, implementing improvements within a single development sprint.',
       'Strengthened problem-solving, debugging, and collaborative development skills while working in an agile environment.'
-  ]
+    ]
   },
 ];
 education: Education[] = [
