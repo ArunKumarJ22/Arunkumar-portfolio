@@ -1,59 +1,102 @@
-# ArunkumarPortfolio
+# Arun Kumar | Full Stack & AI Engineer
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.29.
+<p align="center">
+  <a href="https://arunkumar-web.netlify.app/">
+    <strong> Visit My Portfolio</strong>
+  </a>
+</p>
 
-## Development server
+## About
 
-To start a local development server, run:
+Welcome to my personal developer portfolio!
+
+I'm a Full Stack and AI Engineer based in Paris, France, with an interest in building scalable web applications, AI-powered solutions, and modern software systems.
+
+This portfolio showcases my technical skills, projects, professional experience, and education.
+
+## Tech Stack
+
+- **Frontend:** Angular, TypeScript, HTML5, SCSS
+- **Backend:** Java, Spring Boot, Python, FastAPI, REST APIs
+- **AI & Machine Learning:** OpenAI API, Whisper, RAG, LLMs
+- **Databases:** PostgreSQL, MySQL, Redis, Supabase
+- **DevOps & Cloud:** Docker, Azure, GitHub Actions, Linux
+- **Tools:** Git, GitHub, VS Code
+
+## Featured Projects
+
+### 1. MeetMind — AI Meeting Intelligence Platform
+
+An AI-powered meeting platform that transforms conversations into transcripts, summaries, and interactive learning experiences.
+
+**Technologies:** Python, FastAPI, React, Next.js, PostgreSQL, OpenAI API, Whisper, Docker.
+
+[View Repository](https://github.com/ArunKumarJ22/MeetMind)
+
+### 2. CommitCompass — GitHub Commit Intelligence
+
+A full-stack application designed to analyze GitHub commits and provide meaningful insights into software development activity.
+
+**Technologies:** Java, Spring Boot, React, TypeScript, PostgreSQL, Docker, GitHub API.
+
+[View Repository](https://github.com/ArunKumarJ22)
+
+### 3. DevOps CI/CD
+
+A project exploring containerization and automated deployment workflows using Docker, Docker Compose, GitHub Actions, and Azure.
+
+**Technologies:** Python, Flask, Docker, GitHub Actions, Azure, Linux.
+
+[View Repository](https://github.com/ArunKumarJ22/Devops-CICD)
+
+## Run Locally
+
+### Prerequisites
+
+- Node.js
+- npm
+- Angular CLI (optional)
+
+### Installation
 
 ```bash
-ng serve
+# Clone the repository
+git clone https://github.com/ArunKumarJ22/arun-portfolio.git
+
+# Navigate to the project
+cd arun-portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open `http://localhost:4200` in your browser.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Production Build
 
 ```bash
-ng generate component component-name
+npm run build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The production build will be generated in the `dist/` directory.
 
-```bash
-ng generate --help
-```
+## Live Deployment
 
-## Building
+My portfolio is deployed using Netlify:
 
-To build the project run:
+🌐 https://arunkumar-web.netlify.app/
 
-```bash
-ng build
-```
+## Connect With Me
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- **Portfolio:** https://arunkumar-web.netlify.app/
+- **GitHub:** https://github.com/ArunKumarJ22
+- **LinkedIn:** https://www.linkedin.com/in/arun-kumar22
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<p align="center">
+  Designed and developed by <strong>Arun Kumar</strong> ❤️
+</p>
